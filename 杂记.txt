@@ -1,0 +1,49 @@
+toString()和 valueOf()方法相同的值
+toLocaleString()
+join()
+shift()和 push()方法
+push()和 pop()
+在数组前端添加任意个项并返回新数组的长度。因此，同时使用 unshift()和 pop()方法，可以从相反的方向来模拟队列
+
+
+sort()方法可以接收一个比较函数作为参数,-1,1,0 
+若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+若 a 等于 b，则返回 0。
+若 a 大于 b，则返回一个大于 0 的值。
+
+
+splice()方法始终都会返回一个数组，该数组中包含从原始数组中删除的项（如果没有删除任何项，则返回一个空数组）
+
+
+5 个迭代方法的作用。
+ every()：对数组中的每一项运行给定函数，如果该函数对每一项都返回 true，则返回 true。
+ filter()：对数组中的每一项运行给定函数，返回该函数会返回 true 的项组成的数组。
+        var numbers = [1,2,3,4,5,4,3,2,1];
+        var filterResult = numbers.filter(function(item, index, array){
+        return (item > 2);
+        });
+        alert(filterResult); //[3,4,5,4,3] 
+ forEach()：对数组中的每一项运行给定函数。这个方法没有返回值。
+        forEach()，它只是对数组中的每一项运行传入的函数。这个方法没有返回值，本质上与使用 for 循环迭代数组一样。来看一个例子。
+              var numbers = [1,2,3,4,5,4,3,2,1];
+              numbers.forEach(function(item, index, array){
+              //执行某些操作
+              }); 
+ map()：对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。
+       map方法的作用不难理解，“映射”嘛，也就是原数组被“映射”成对应新数组
+ some()：对数组中的每一项运行给定函数，如果该函数对任一项返回 true，则返回 true。
+以上方法都不会修改数组中的包含的值。
+
+
+reduce()和 reduceRight()的函数接收 4 个参数：前一个值、当前值、项的索引和数组对象
+var values = [1,2,3,4,5];
+var sum = values.reduce(function(prev, cur, index, array){
+ return prev + cur;
+});
+alert(sum); //15 
+
+
+
+
+
+
